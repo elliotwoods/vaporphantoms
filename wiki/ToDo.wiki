@@ -1,6 +1,6 @@
 #Things todo on this project
 
-= List =
+= ToDo list =
 
  * DMX output
  * Make manual/automatic patches
