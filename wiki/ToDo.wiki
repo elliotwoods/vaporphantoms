@@ -2,5 +2,5 @@
 
 = List =
 
-* DMX output
-* Make manual/automatic patches
+ * DMX output
+ * Make manual/automatic patches
