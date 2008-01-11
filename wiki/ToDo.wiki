@@ -1,0 +1,6 @@
+#Things todo on this project
+
+= List =
+
+* DMX output
+* Make manual/automatic patches
