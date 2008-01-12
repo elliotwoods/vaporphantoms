@@ -1,5 +1,4 @@
-#Things todo on this project
-
+# things todo 
 = ToDo list =
 
  * DMX output
