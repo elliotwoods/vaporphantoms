@@ -1,0 +1,11 @@
+max v2;
+#N vpatcher 15 55 615 455;
+#N comlet ;
+#P outlet 178 151 15 0;
+#P objectname Outlet1;
+#P window setfont "Sans Serif" 9.;
+#P flonum 172 127 35 9 0 0 0 139 0 0 0 221 221 221 222 222 222 0 0 0;
+#P inlet 173 95 15 0;
+#P connect 0 0 1 0;
+#P connect 1 0 2 0;
+#P pop;
