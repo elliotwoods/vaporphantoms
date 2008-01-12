@@ -1,0 +1,16 @@
+JOYSTICK LICENSE
+----------------
+Joystick Beta 2
+by Dan Schoenblum
+http://killerrobotsfromhell.com/maxmsp/joystick/
+March 14, 2004
+----------------
+"Joystick" is beta software, no guarantees are made as to its functionality,
+and no warranty is provided or implied.
+
+Joystick may only be used for non-commercial purposes.  Any commercial use
+must receive explicit approval from the author (Dan Schoenblum).
+
+Joystick may not be redistributed for commercial gain.  It may only be
+redistributed free of charge, in which case it must be redistributed
+in its original form, including this license file.
