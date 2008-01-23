@@ -47,7 +47,7 @@ function list(inList)
 		possOutputs[3] = new possOutput(fnThetaGoAround(arguments[0] - (2*Math.PI)), arguments[1]);
 		
 		possOutputs.sort(rateOutputs); // uses the sort function above to give a rating for each
-		outlet(0,possOutputs[0].theta % (2 * Math.PI));
+		outlet(0,possOutputs[0].theta);
 		outlet(1,possOutputs[0].thi);
 	}
 }
