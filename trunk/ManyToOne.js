@@ -14,8 +14,8 @@ var aimThi = 0;
 var lasttime = 0; // absolute time of last update (ms)
 var dt = 10; // time since last update (ms)
 
-const speedTheta = 2;
-const speedThi = 2;
+const speedTheta = 1;
+const speedThi = 1;
 
 function loadbang()
 {
@@ -57,6 +57,7 @@ function updateTime()
 
 function distanceToAim()
 {
+	post("currenttheta" + currenttheta + "\n currentthi" + currentthi + "\n aimtheta" + aimtheta + "\n aimthi" + aimthi + "\n");
 	return Math.sqrt(Math.pow(aimThi - currentThi, 2) + Math.pow(aimTheta - currentTheta, 2));
 }
 function rateOutputs(A,B)
@@ -118,8 +119,8 @@ function list(inList)
 {
 	aimTheta = arguments[0];
 	aimThi = arguments[1];
-	
-	
+	var output = new Array();
+	// post ("method " + method + "\n");
 	if (arguments[1] < - 0.6720) // this light should be off because it cant point at this phantom (the phantom is below the viewable area of the mac light)
 	{
 		
@@ -136,16 +137,20 @@ function list(inList)
 				possOutputs[3] = possOutputMethods(4, arguments[0], arguments[1]);
 				
 				possOutputs.sort(rateOutputs); // uses the sort function above to give a rating for each
-				output = possOutputs[0];
+				output[0] = possOutputs[0];
+				output[1] = possOutputs[1];
+				post("po[0][0]=" + possOutputs[0][0] + "\n");
 				break;
 			
 			default:
-				output = possOutputMethods(arguments[0], arguments[1], method)
+				output = possOutputMethods(method, arguments[0], arguments[1])
 				break;
 		}
 		
-		outlet(0,output.theta);
-		outlet(1,output.thi);
+		// post(output + " " + output + "\n");
+		// post("output[0], [1]" + output[0] + " " + output[1] + "\n");
+		outlet(0,output[0]);
+		outlet(1,output[1]);
 		
 		aimTheta = output.theta;
 		aimThi = output.thi;
