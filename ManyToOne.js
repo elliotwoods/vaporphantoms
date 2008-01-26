@@ -14,8 +14,8 @@ var aimThi = 0;
 var lasttime = 0; // absolute time of last update (ms)
 var dt = 10; // time since last update (ms)
 
-const speedTheta = 1;
-const speedThi = 1;
+const speedTheta = 2;
+const speedThi = 2;
 
 function loadbang()
 {
